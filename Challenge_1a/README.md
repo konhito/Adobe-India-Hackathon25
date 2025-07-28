@@ -34,10 +34,17 @@ PDF Input → Text Extraction → Heading Detection → JSON Output
 
 ### Core Libraries
 
+<<<<<<< HEAD
 | Library | Version | Purpose | Size |
 |---------|---------|---------|------|
 | **PyMuPDF** | 1.23.26 | PDF text extraction and parsing | ~15MB |
 | **NumPy** | 1.24.4 | Numerical operations and array processing | ~5MB |
+=======
+| Library     | Version | Purpose                                   | Size  |
+| ----------- | ------- | ----------------------------------------- | ----- |
+| **PyMuPDF** | 1.23.26 | PDF text extraction and parsing           | ~15MB |
+| **NumPy**   | 1.24.4  | Numerical operations and array processing | ~5MB  |
+>>>>>>> b635c62 (1b)
 
 ### Why These Libraries?
 
@@ -49,12 +56,23 @@ PDF Input → Text Extraction → Heading Detection → JSON Output
 ### Model-Free Approach
 
 This solution uses **no machine learning models**, instead relying on:
+<<<<<<< HEAD
 - **Font Analysis**: Size, weight, and style detection
 - **Layout Analysis**: Spatial relationships and gaps
 - **Text Pattern Recognition**: Regex-based filtering
 - **Statistical Analysis**: Font size distribution and clustering
 
 This approach ensures:
+=======
+
+- **Font Analysis**: Size, weight, and style detection
+- **Layout Analysis**: Spatial relationships and gaps
+- **Text Pattern Recognition**: Regex-based filtering
+- **Statistical Analysis**: Font size distribution and clustering
+
+This approach ensures:
+
+>>>>>>> b635c62 (1b)
 - **Fast Processing**: No model loading time
 - **Small Footprint**: Under 50MB total size
 - **Reliability**: No dependency on external model files
@@ -77,11 +95,19 @@ This approach ensures:
 
 ### Processing Times
 
+<<<<<<< HEAD
 | PDF Type | Pages | Expected Time | Memory Usage |
 |----------|-------|---------------|--------------|
 | Simple Text | 10 | 1-2 seconds | 150MB |
 | Complex Layout | 25 | 3-5 seconds | 300MB |
 | Large Document | 50 | 8-10 seconds | 500MB |
+=======
+| PDF Type       | Pages | Expected Time | Memory Usage |
+| -------------- | ----- | ------------- | ------------ |
+| Simple Text    | 10    | 1-2 seconds   | 150MB        |
+| Complex Layout | 25    | 3-5 seconds   | 300MB        |
+| Large Document | 50    | 8-10 seconds  | 500MB        |
+>>>>>>> b635c62 (1b)
 
 ## Installation and Usage
 
@@ -125,7 +151,11 @@ project/
 
 ```json
 {
+<<<<<<< HEAD
   preselected: "Document Title",
+=======
+  "preselected": "Document Title",
+>>>>>>> b635c62 (1b)
   "outline": [
     {
       "level": "H1",
@@ -133,7 +163,11 @@ project/
       "page": 1
     },
     {
+<<<<<<< HEAD
       "level": "H2", 
+=======
+      "level": "H2",
+>>>>>>> b635c62 (1b)
       "text": "Sub Heading",
       "page": 2
     }
@@ -172,6 +206,10 @@ is_short = len(block.text.split()) < 20
 ### Pattern Filtering
 
 The solution filters out common non-heading content:
+<<<<<<< HEAD
+=======
+
+>>>>>>> b635c62 (1b)
 - Contact information (phone, email, addresses)
 - Dates and timestamps
 - Page numbers
@@ -284,4 +322,8 @@ This solution was developed for the Adobe India Hackathon 2025. For questions or
 
 ---
 
+<<<<<<< HEAD
 **Built with ❤️ and SUS for Adobe India Hackathon 2025**
+=======
+**Built with ❤️ for Adobe India Hackathon 2025**
+>>>>>>> b635c62 (1b)
