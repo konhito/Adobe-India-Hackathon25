@@ -1,0 +1,5 @@
+# Adobe Hackathon 2025 - PDF Processing Requirements
+# Lightweight dependencies for digital PDF text extraction
+
+PyMuPDF==1.23.26
+numpy==1.24.4

@@ -1,0 +1,26 @@
+FROM --platform=linux/amd64 python:3.10-slim
+
+WORKDIR /app
+
+# Install system dependencies for PyMuPDF
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc g++ \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements and install
+COPY requirements.txt .
+RUN pip install --no-cache-dir --prefer-binary -r requirements.txt
+
+# Copy script
+COPY process_pdfs.py .
+
+# Create input/output folders
+RUN mkdir -p /app/input /app/output
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONHASHSEED=0
+
+# Run script
+ENTRYPOINT ["python", "process_pdfs.py"]
